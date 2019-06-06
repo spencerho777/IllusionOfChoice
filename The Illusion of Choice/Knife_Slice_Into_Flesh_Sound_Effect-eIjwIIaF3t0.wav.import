@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Knife_Slice_Into_Flesh_Sound_Effect-eIjwIIaF3t0.wav-86b863c3b89c753dcd9492b2fff0f7b9.sample"
+
+[deps]
+
+source_file="res://Knife_Slice_Into_Flesh_Sound_Effect-eIjwIIaF3t0.wav"
+dest_files=[ "res://.import/Knife_Slice_Into_Flesh_Sound_Effect-eIjwIIaF3t0.wav-86b863c3b89c753dcd9492b2fff0f7b9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

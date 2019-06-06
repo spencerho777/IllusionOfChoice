@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Levels/TitleScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Player2.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Levels/PlayerLevel2.gd" type="Script" id=4]
+[ext_resource path="res://platform.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27.152, 29.0012 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.6075, 121.939 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 105.803, 8.06036 )
+
+[node name="Node2D" instance=ExtResource( 1 )]
+
+[node name="Copy" type="KinematicBody2D" parent="." index="0"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 1095, 640 )
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Player Sprite" type="Sprite" parent="Copy" index="0"]
+light_mask = 3
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Copy" index="1"]
+shape = SubResource( 1 )
+
+[node name="Player" parent="." index="1"]
+position = Vector2( 110, 640 )
+script = ExtResource( 4 )
+
+[node name="Floor" parent="." index="2"]
+editor/display_folded = false
+
+[node name="Title Proc Body" parent="." index="7"]
+position = Vector2( 177.915, 362.248 )
+
+[node name="Title Label" parent="Control" index="0"]
+margin_left = -1.0
+margin_top = 77.6091
+margin_right = 1203.0
+margin_bottom = 573.609
+text = "When I looked into the mirror
+					I knew who I saw"
+
+[node name="Light2D" parent="." index="10"]
+position = Vector2( 628.244, 275.961 )
+scale = Vector2( 9.73912, 9.73912 )
+
+[node name="MidPlatform" type="StaticBody2D" parent="." index="11"]
+editor/display_folded = true
+position = Vector2( 600, 576.68 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MidPlatform" index="0"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="MidPlatform" index="1"]
+scale = Vector2( 0.0210483, 2.65717 )
+texture = ExtResource( 5 )
+
+[node name="LeftPlatform1" type="StaticBody2D" parent="." index="12"]
+editor/display_folded = true
+position = Vector2( 470, 610 )
+
+[node name="Sprite" type="Sprite" parent="LeftPlatform1" index="0"]
+scale = Vector2( 0.211649, 0.170382 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftPlatform1" index="1"]
+shape = SubResource( 3 )
+
+[node name="RightPlatform1" type="StaticBody2D" parent="." index="13"]
+editor/display_folded = true
+position = Vector2( 730, 610 )
+
+[node name="Sprite" type="Sprite" parent="RightPlatform1" index="0"]
+scale = Vector2( 0.211649, 0.170382 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightPlatform1" index="1"]
+shape = SubResource( 3 )
+
+[node name="LeftPlatform2" type="StaticBody2D" parent="." index="14"]
+editor/display_folded = true
+position = Vector2( 470, 530 )
+
+[node name="Sprite" type="Sprite" parent="LeftPlatform2" index="0"]
+scale = Vector2( 0.211649, 0.170382 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftPlatform2" index="1"]
+shape = SubResource( 3 )
+
+[node name="RightPlatform2" type="StaticBody2D" parent="." index="15"]
+editor/display_folded = true
+position = Vector2( 730, 530 )
+
+[node name="Sprite" type="Sprite" parent="RightPlatform2" index="0"]
+scale = Vector2( 0.211649, 0.170382 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightPlatform2" index="1"]
+shape = SubResource( 3 )
